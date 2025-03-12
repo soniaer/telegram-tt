@@ -73,7 +73,7 @@ export async function init(initialArgs: ApiInitialArgs) {
     mockScenario, shouldForceHttpTransport, shouldAllowHttpTransport,
     shouldDebugExportedSenders, langCode, isTestServerRequested,
   } = initialArgs;
-
+console.log(initialArgs,"&&&&&&&&&")
   const session = new sessions.CallbackSession(sessionData, onSessionUpdate);
 
   // eslint-disable-next-line no-restricted-globals
@@ -113,10 +113,12 @@ export async function init(initialArgs: ApiInitialArgs) {
       // eslint-disable-next-line no-restricted-globals
       (self as any).GramJs = GramJs;
     }
-
+ 
     try {
+      console.log(platform, webAuthToken,"#################")
       client.setPingCallback(getDifference);
-      await client.start({
+      
+      const abc = await client.start({
         phoneNumber: onRequestPhoneNumber,
         phoneCode: onRequestCode,
         password: onRequestPassword,
@@ -129,9 +131,10 @@ export async function init(initialArgs: ApiInitialArgs) {
         webAuthTokenFailed: onWebAuthTokenFailed,
         mockScenario,
       });
+      console.log(abc,"^^^^^^^^^^^^^^")
     } catch (err: any) {
       // eslint-disable-next-line no-console
-      console.error(err);
+      console.error(err.message);
 
       if (err.message !== 'Disconnect' && err.message !== 'Cannot send requests while disconnected') {
         sendApiUpdate({

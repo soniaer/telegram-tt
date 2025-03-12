@@ -246,7 +246,7 @@ const AttachMenu: FC<OwnProps> = ({
           <MenuItem icon="poll" onClick={onPollCreate}>{lang('Poll')}</MenuItem>
         )}
 
-        {!editingMessage && !canEditMedia && !isScheduled && bots?.map((bot) => (
+        {/* {!editingMessage && !canEditMedia && !isScheduled && bots?.map((bot) => (
           <AttachBotItem
             bot={bot}
             chatId={chatId}
@@ -255,7 +255,7 @@ const AttachMenu: FC<OwnProps> = ({
             onMenuOpened={markAttachmentBotMenuOpen}
             onMenuClosed={unmarkAttachmentBotMenuOpen}
           />
-        ))}
+        ))} */}
       </Menu>
     </div>
   );

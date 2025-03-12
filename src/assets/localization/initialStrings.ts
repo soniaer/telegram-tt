@@ -7,7 +7,7 @@ export default {
   "LoginJustSentSms": "We've sent you a code via SMS. Please enter it above.",
   "LoginHeaderPassword": "Enter Password",
   "LoginEnterPasswordDescription": "You have Two-Step Verification enabled, so your account is protected with an additional password.",
-  "StartText": "Please confirm your country codenand enter your phone number.",
+  "StartText": "Please confirm your country code\nand enter your phone number.",
   "LoginPhonePlaceholder": "Your phone number",
   "LoginNext": "Next",
   "LoginQRLogin": "Log in by QR Code",
